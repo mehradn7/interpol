@@ -46,31 +46,45 @@ T4 = (T4*(length(T4) - 1) + (length(T4) + 1)) / 2;
 %% Calcul des points à afficher
 A2 = 1:pas:length(X);
 X2 = zeros(1,length(A2));
+X22 = zeros(1,length(A2));
+
 somme = 0;
+somme2 = 0;
 
 for i=1:(length(A2))
     for j=1:(length(T4))
         somme = somme +X(j)*Li(j,A2(i),T4);
+        somme2 = somme2 +X(j)*Li(j,A2(i),0.1+T4);
     end
     X2(i) = somme;
+    X22(i) = somme2;
     somme = 0;
+    somme2 = 0;
 end
 
 B2 = 1:pas:length(Y);
 Y2 = zeros(1,length(B2));
+Y22 = zeros(1,length(B2));
+
 somme = 0;
+somme2 = 0;
 
 for i=1:(length(B2))
     for j=1:(length(T4))
         somme = somme +Y(j)*Li(j,B2(i),T4);
+        somme2 = somme2 +Y(j)*Li(j,B2(i),0.1+T4);
+
     end
     Y2(i) = somme;
+    Y22(i) = somme2;
     somme = 0;
+    somme2 = 0;
 end
 
 %% Affichage
 hold on
 plot(X2,Y2);
+plot(X22,Y22,'+');
 
 %% Neville
 % on affiche un point interpolé avec l'algorithme de Neville
