@@ -17,8 +17,7 @@ plot(x,y,'r+'); %dessine les points un à un
 hold off
 end;
 P=[X;Y];
-P
-P(1,:)
-P(2,:)
+P(1,:);
+P(2,:);
 hold on;
 end
