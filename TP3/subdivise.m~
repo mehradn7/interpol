@@ -1,0 +1,12 @@
+function [X,Y] = subdivise(nb_iter, degre, X,Y)
+    %% Doubler les points
+    newX = zeros(size(X));
+    newY = zeros(size(Y));
+    for k=1:length(newX)
+        newX(k) = X(mod(
+        [Y(k)] = [Y(k),Y(k)];
+    end
+
+
+end
+
