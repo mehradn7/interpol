@@ -5,16 +5,18 @@ pas = 0.001;% pas d'échantillonage
 [X,Y] = saisi_points();
 
 k = 2;
-noeuds = [1, 1,1:length(X)];
-I =  1:pas:length(X)+k;
+n = length(X)-1;
+m = n + k + 1;
+noeuds = [zeros(1,k+1) 0.2*ones(1,m-2*k-1) (m-2*k)*ones(1,k+1)];
+I =  0:pas:m-2*k;
 X2 = zeros(1,length(I));
 Y2 = zeros(1,length(I));
 
-% deCasteljau évaluation
+% de Boor évaluation
 for i=1:length(I)
     y = de_boor(X,Y,noeuds,I(i),k);
-    X2(k) = y(1);
-    Y2(k) = y(2);
+    X2(i) = y(1);
+    Y2(i) = y(2);
 end
 
 figure(1)
