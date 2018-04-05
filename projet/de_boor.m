@@ -15,11 +15,11 @@ for r = 1:k
    for i = k:-1:r
       alpha = (t - T(j+i-k)) /(T(i+1+j-r) - T(i+j-k));
 
-      Dx(i) = (1.0 - alpha) * Dx(i) + alpha * Dx(i+1);
-      Dy(i) = (1.0 - alpha) * Dy(i) + alpha * Dy(i+1);
+      Dx(i+1) = (1.0 - alpha) * Dx(i) + alpha * Dx(i+1);
+      Dy(i+1) = (1.0 - alpha) * Dy(i) + alpha * Dy(i+1);
    end
 end
 
-y = [Dx(1); Dy(1)];
+y = [Dx(k+1); Dy(k+1)];
 
 end
