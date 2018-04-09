@@ -10,9 +10,18 @@ while d<=n-1 && ~((v >= T2(d)) && (v < T2(d+1)))
     d = d+1;
 end
 
+s = 0;
+if u == T1(c)
+    s = sum(T1 == T1(c));
+end
+
+t = 0;
+if d == T2(d)
+    t = sum(T2 == T2(d));
+end
 
 
-for i = c-l:c
+for i = c-l:c-s
     for p=0:k
         Dx(p+1)=X(i,d-p);
         Dy(p+1)=Y(i,d-p);
@@ -27,6 +36,6 @@ end
 % Qy
 % Qz
 % T1
-y = de_boor_3D(Qx(c-l:c),Qy(c-l:c),Qz(c-l:c),T2,v,l);
+y = de_boor_3D(Qx(c-l:c-s),Qy(c-l:c-s),Qz(c-l:c-s),T2,v,l-s);
 
 end

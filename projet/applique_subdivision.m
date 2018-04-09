@@ -5,11 +5,12 @@ function [ M_res ] = applique_subdivision( M, nb_iter, degre )
 % sur chaque ligne de la matrice M
 
 quelconque = zeros(1,42);
-
-M_res = zeros(size(M,1), (2^nb_iter)*size(M,2) + 1);
+size(M)
+M_res = zeros(size(M,1), (2^nb_iter)*size(M,2)+1);
+size(M_res)
 for i=1:size(M,1)
-    [M_i_res, ~] = subdivise_ferme(nb_iter,degre,M(i,:), quelconque);
-    M_res(i,:) = M_i_res;
+    a = subdivise_ouvert(nb_iter,degre,M(i,:), quelconque);
+    M_res(i,:) =a;
 end
 
 end
