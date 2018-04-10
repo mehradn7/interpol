@@ -1,7 +1,7 @@
 function [ M_res ] = applique_deBoor( M, degre, noeud, I)
 % Prend en paramètre une matrice M représentant les abscisses d'une grille
 % de points
-% Renvoie une matrice M_res résultat de l'application de subdivise_ferme
+% Renvoie une matrice M_res résultat de l'application de de_boor_3D
 % sur chaque ligne de la matrice M
 
 
