@@ -6,6 +6,7 @@ while j<=length(X)-1 && ~((t >= T(j)) && (t < T(j+1)))
 end
 
 
+
 for p=0:k
     Dx(p+1)=X(p+j-k);
     Dy(p+1)=Y(p+j-k);
