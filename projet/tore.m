@@ -14,8 +14,8 @@ Tore(:,:,3) = [-0.5 -0.5 -0.5 -0.5
 			    0.5  0.5  0.5  0.5
 			   -0.5 -0.5 -0.5 -0.5];
           
-Tore(:,2,:) = 2*Tore(:,2,:); % enlever pour avoir une figure symétrique
-Tore(:,1,:) = 0.5*Tore(:,1,:); % enlever pour avoir une figure symétrique
+% Tore(:,2,:) = 2*Tore(:,2,:); % commenter pour avoir une figure symétrique
+% Tore(:,1,:) = 0.5*Tore(:,1,:); % commenter pour avoir une figure symétrique
 surf(Tore(:,:,1),Tore(:,:,2),Tore(:,:,3))
 
 end
