@@ -3,7 +3,7 @@ degre = 4;
 nb_iter = 4;
 
 
-Grille = tore();
+Grille = toreferme();
 X = Grille(:,:,1);
 Y = Grille(:,:,2);
 Z = Grille(:,:,3);
