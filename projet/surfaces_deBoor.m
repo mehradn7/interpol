@@ -1,11 +1,12 @@
 %% SURFACES de Boor - PROJET PARTIE 2
-k = 3;
-l = 3;
+k = 4;
+l = 4;
 
-pas = 0.1;% pas d'échantillonage
+pas = 0.05;% pas d'échantillonage
 
 
-Grille = toreferme();
+
+Grille = tore();
 X = Grille(:,:,1);
 Y = Grille(:,:,2);
 Z = Grille(:,:,3);
