@@ -9,7 +9,7 @@ M_res = zeros(size(M,1), length(I));
 
 for i=1:size(M,1)
     for j = 1:length(I)
-        M_ferme = [M(i,end-degre:end) M(i,:) M(i,1:degre)];
+        M_ferme = [M(i,end-degre:end) M(i,:) M(i,1:degre+1)];
         a = de_boor_3D(M_ferme, noeud, I(j), degre);
         M_res(i,j) =a;
     end
