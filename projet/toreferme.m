@@ -1,4 +1,4 @@
-function Tore = tore()
+function Tore = toreferme()
 
 Tore = zeros(5,5,3);
 Tore(:,:,1) = [-1.5  0.0  1.5  0.0 -1.5

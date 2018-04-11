@@ -5,7 +5,7 @@ l = 3;
 pas = 0.1;% pas d'échantillonage
 
 
-Grille = grille();
+Grille = toreferme();
 X = Grille(:,:,1);
 Y = Grille(:,:,2);
 Z = Grille(:,:,3);
