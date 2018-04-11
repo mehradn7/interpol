@@ -1,6 +1,6 @@
 %% SURFACES SPLINES - PROJET PARTIE 1
 degre = 4;
-nb_iter = 1;
+nb_iter = 2;
 
 
 Grille = grille();
