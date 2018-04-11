@@ -4,7 +4,7 @@ pas = 0.001;% pas d'échantillonage
 % récupérer les points saisis par l'utilisateur 
 [X,Y] = saisi_points();
 
-k = 3;
+k = 4;
 n = length(X)-1;
 m = n + k + 1;
 noeuds = [zeros(1,k+1) ones(1,m-2*k-1) (m-2*k)*ones(1,k+1)];
@@ -12,7 +12,7 @@ noeuds = [zeros(1,k+1) ones(1,m-2*k-1) (m-2*k)*ones(1,k+1)];
 
 I =  0:pas:m-2*k;
 X2 = zeros(1,length(I));
-Y2 = zeros(1,length(I));    
+Y2 = zeros(1,length(I));
 
 % de Boor évaluation
 for i=1:length(I)

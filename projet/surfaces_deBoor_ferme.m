@@ -1,6 +1,6 @@
 %% SURFACES de Boor - PROJET PARTIE 2
-k = 3;
-l = 3;
+k = 2;
+l = 2;
 
 pas = 0.1;% pas d'échantillonage
 

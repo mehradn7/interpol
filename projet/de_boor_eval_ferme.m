@@ -9,7 +9,6 @@ Y_ferme = [Y(end-k:end) Y Y(1:k+1)];
 n = length(X_ferme)-1;
 m = n + k + 1;
 noeuds = [zeros(1,k+1) 1:m-2*k-1 (m-2*k)*ones(1,k+1)];
-% noeuds = [0 0 0 1 2 2 2];
 
 I =  k-1:pas:m-2*k-(k-1);
 X2 = zeros(1,length(I));
