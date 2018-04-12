@@ -1,9 +1,9 @@
 %% SURFACES SPLINES - PROJET PARTIE 1
-degre = 4;
+degre = 3;
 nb_iter = 2;
 
 
-Grille = tore();
+Grille = grille();
 X = Grille(:,:,1);
 Y = Grille(:,:,2);
 Z = Grille(:,:,3);
